@@ -1,6 +1,6 @@
 import FeaturedProducts from '../components/homepage/FeaturedProducts'
-import Banner from '../components/homepage/Banner'
-import Footer from '../components/homepage/Footer'
+import Banner from '@/components/homepage/Banner'
+import Footer from '@/components/homepage/Footer'
 
 export default function HomePage () {
     return (

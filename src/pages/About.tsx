@@ -7,7 +7,11 @@ export default function About () {
             <div className="flex flex-col lg:flex-row items-center w-1/2"> 
             <img src="/fam-pic.svg" width={200}/>
             <p className="text-mono">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <span className="text-2xl text-amber-700">DiAL</span> 
+            stands for <span className="text-xl text-amber-600">D</span>ines, 
+            <span className="text-xl text-amber-600">A</span>lyssa,
+             and <span className="text-xl text-amber-600">L</span>ucas...
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
             </div>
         </div>

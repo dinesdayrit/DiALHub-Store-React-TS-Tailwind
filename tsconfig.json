@@ -21,12 +21,11 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Custom Import  */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+      "baseUrl": ".", // This must be specified if "paths" is.
+      "paths": {
+        "@/*": ["src/*"]
+      }
+    
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
