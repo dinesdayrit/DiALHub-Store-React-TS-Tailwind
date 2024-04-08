@@ -2,6 +2,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Root from "./pages/Root";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
+import About from "./pages/About";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -9,6 +10,7 @@ const router = createBrowserRouter(
           {/* place your routes here so the navbar will be visible */}
           <Route path="" element={<HomePage />} />
           <Route path="login" element={<Login />} />
+          <Route path="about" element={<About />} />
 
       </Route>
   )

@@ -1,4 +1,4 @@
-export default function Products() {
+export default function FeaturedProducts() {
     return (
         <div className="flex flex-col items-center mt-16 mb-16">
             <h1 className="mb-4 text-5xl">Featured Products</h1>

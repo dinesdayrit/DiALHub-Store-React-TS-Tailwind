@@ -11,8 +11,7 @@ export default function MainNavigation() {
 
   return (
     <div className="py-6 px-3 lg:px-24 bg-gray-700 flex justify-between">
-      <h1 className="text-white font-serif font-bold lg:text-3xl">DiAL</h1>
-
+      <NavLink to="" className="text-white font-serif font-bold lg:text-3xl">DiAL</NavLink>
       <div className="">
         {/* Hamburger menu icon */}
        <RxHamburgerMenu onClick={toggleMenu} className='lg:hidden block text-white top-0' />
