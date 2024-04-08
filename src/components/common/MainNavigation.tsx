@@ -10,8 +10,8 @@ export default function MainNavigation() {
   };
 
   return (
-    <div className="py-6 px-3 lg:px-24 bg-gray-700 flex justify-end">
-      {/* <h1 className="text-white font-mono font-bold text-3xl">DiAL</h1> */}
+    <div className="py-6 px-3 lg:px-24 bg-gray-700 flex justify-between">
+      <h1 className="text-white font-serif font-bold lg:text-3xl">DiAL</h1>
 
       <div className="">
         {/* Hamburger menu icon */}

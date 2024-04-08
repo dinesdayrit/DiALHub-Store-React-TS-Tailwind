@@ -4,10 +4,14 @@ import Footer from '../components/homepage/Footer'
 
 export default function HomePage () {
     return (
-        <>
-        <Banner />
-        <Products/>
-        <Footer />
-        </>
+        <div className="flex flex-col min-h-screen">
+            <div className="flex-grow">
+                <Banner />
+                <Products />
+            </div>
+            <footer>
+                <Footer />
+            </footer>
+        </div>
     )
 }
