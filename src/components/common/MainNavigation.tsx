@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink,  } from "react-router-dom";
 import { RxHamburgerMenu } from 'react-icons/rx';
 
 export default function MainNavigation() {
@@ -10,7 +10,7 @@ export default function MainNavigation() {
   };
 
   function isActiveChecker(isActive:boolean) {
-    return isActive ? "mr-8 text-white hover:text-orange-300 font-semibold text-xl lg:border-b lg:border-yellow-300 p-2" : "mr-8 text-white hover:text-orange-300 font-semibold text-xl";
+    return isActive ? "mr-8 text-white hover:text-orange-300 font-semibold text-xl lg:border-b lg:border-yellow-300 p-2" : "mr-8 text-white hover:text-orange-300 font-semibold text-xl p-2";
 }
 
 
