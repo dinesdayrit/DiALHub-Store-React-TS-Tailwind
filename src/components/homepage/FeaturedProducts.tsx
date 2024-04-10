@@ -1,7 +1,10 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 import DUMMY_PRODUCTS from "@/DummyProducts";
 
 const FeaturedProducts: FC = () => {
+
+
     // Get the first three products
     const featuredProducts = DUMMY_PRODUCTS.slice(0, 3);
 
@@ -24,7 +27,7 @@ const FeaturedProducts: FC = () => {
                         </div>
                     ))}
                 </div>
-                <button className="hover:text-green-500">More Products &gt;&gt;</button>   
+                <Link className="hover:text-green-500" to="products">More Products &gt;&gt;</Link>   
             </div>
         </div>
     );

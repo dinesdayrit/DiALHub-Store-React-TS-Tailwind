@@ -33,18 +33,18 @@ const DUMMY_PRODUCTS = [
     },
     {
         id: '5',
-        image: './shopping-card-yellow.svg',
-        name: 'Matte Black',
+        image: './qsomni.png',
+        name: 'Quiksilver Rashguard',
         price: 3000,
-        description: 'Standard Black Card',
+        description: 'Quiksilver Omni Session LS Rashguard',
      
     },
     {
         id: '6',
-        image: './shopping-card-blue.svg',
-        name: 'Matte Black',
+        image: './runningShorts.png',
+        name: 'Adiddas wmns',
         price: 3000,
-        description: 'Standard Black Card',
+        description: 'Adiddas running short wmns',
       
     },
 ];

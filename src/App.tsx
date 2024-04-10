@@ -1,8 +1,9 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom"
-import Root from "./pages/Root";
-import HomePage from "./pages/HomePage";
-import Login from "./pages/Login";
-import About from "./pages/About";
+import Root from "@/pages/Root";
+import HomePage from "@/pages/HomePage";
+import Login from "@/pages/Login";
+import About from "@/pages/About";
+import Products from "@/pages/Products"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -11,6 +12,7 @@ const router = createBrowserRouter(
           <Route path="" element={<HomePage />} />
           <Route path="login" element={<Login />} />
           <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
 
       </Route>
   )
