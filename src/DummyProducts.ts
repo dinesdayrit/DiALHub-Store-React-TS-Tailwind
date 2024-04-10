@@ -17,18 +17,18 @@ const DUMMY_PRODUCTS = [
     },
     {
         id: '3',
-        image: './nikeBball2.png',
-        name: 'Nike Impact 4',
+        image: './nuphyAir.png',
+        name: 'Nuphy Air75',
         price: 3000,
-        description: 'Colour Shown: Black/Armoury Navy/Pure Platinum/Volt',
+        description: 'NuPhy Air75 V2 QMK/VIA Wireless Mechanical Keyboard',
      
     },
     {
         id: '4',
         image: './nikeBball2.png',
-        name: 'Matte Black',
+        name: 'Nike Impact 4',
         price: 3000,
-        description: 'Standard Black Card',
+        description: 'Colour Shown: Black/Armoury Navy/Pure Platinum/Volt',
      
     },
     {
