@@ -13,7 +13,7 @@ export default function Products() {
                         <h2 className="text-xl font-semibold">{product.name}</h2>
                         <p className="text-gray-600">{product.description}</p>
                         <p className="text-lg font-bold mt-2">${product.price.toFixed(2)}</p>
-                        <button className="bg-green-500 text-white px-4 py-2 rounded-md mt-2">Add to cart</button>
+                        <button className='bg-green-500 hover:bg-green-500/90 p-3 rounded-lg text-white hover:font-medium'>Add to cart</button>
                     </div>
                 </div>
             ))}

@@ -22,12 +22,12 @@ const FeaturedProducts: FC = () => {
                                 <h2 className="text-center font-bold">{item.name}</h2>
                                 <p className="text-center">{item.description}</p>
                                 <p className="text-center">Price: ${item.price.toFixed(2)}</p>
-                                <button className='bg-green-500 p-3 rounded-lg text-white'>Add to cart</button>
+                                <button className='bg-green-500 hover:bg-green-500/90 p-3 rounded-lg text-white hover:font-medium'>Add to cart</button>
                             </div>
                         </div>
                     ))}
                 </div>
-                <Link className="hover:text-green-500" to="products">More Products &gt;&gt;</Link>   
+                <Link className="hover:text-green-500 hover:font-medium" to="products">More Products &gt;&gt;</Link>   
             </div>
         </div>
     );
