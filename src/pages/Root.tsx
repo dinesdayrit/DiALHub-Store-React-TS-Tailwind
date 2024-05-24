@@ -7,7 +7,7 @@ export default function Root () {
 
             <MainNavigation />
   
-            <main className="bg-stone-200 z-0">
+            <main>
                 <Outlet />
             </main>
             
