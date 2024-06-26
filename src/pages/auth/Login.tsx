@@ -19,8 +19,9 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center md:mt-16 lg:18">
-      <div className="flex flex-col lg:justify-center p-12 rounded-md lg:w-[30rem] lg:h-auto h-screen w-screen border shadow-xl">
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-screen">
+
+      <div className="flex flex-col lg:justify-center p-12 h-full items-center">
         <div className="flex flex-col items-center">
           <img src="./dial-logo.png" width={100} alt="Dial Logo" />
           <h1 className="font-bold text-3xl text-green-500">Login</h1>
@@ -48,6 +49,10 @@ export default function Login() {
             Don't have an account? <Link to='/signup' className="text-green-500 cursor-pointer">Register here</Link>
           </p>
         </form>
+      </div>
+
+      <div className="hidden md:block w-full h-full 2">
+        <img src='/loginpic.jpg' alt="/" className="h-full"/>
       </div>
     </div>
   );
