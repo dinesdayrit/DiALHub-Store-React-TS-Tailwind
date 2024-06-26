@@ -1,5 +1,6 @@
 import FeaturedProducts from '../components/homepage/FeaturedProducts'
 import Banner from '@/components/homepage/Banner'
+import Brands from '@/components/homepage/Brands'
 import Footer from '@/components/homepage/Footer'
 
 export default function HomePage () {
@@ -7,6 +8,7 @@ export default function HomePage () {
         <div className="flex flex-col min-h-screen">
             <div className="flex-grow">
                 <Banner />
+                <Brands />
                 <FeaturedProducts />
             </div>
             <footer>
