@@ -10,13 +10,13 @@ export default function MainNavigation() {
   };
 
   function isActiveChecker(isActive:boolean) {
-    return isActive ? "mr-8 text-white hover:text-orange-300 font-semibold text-xl lg:border-b lg:border-yellow-300 p-2" : "mr-8 text-white hover:text-orange-300 font-semibold text-xl p-2";
+    return isActive ? "mr-8 text-white hover:text-orange-300 text-xl lg:border-b lg:border-yellow-300 p-1" : "mr-8 text-white hover:text-orange-300  text-xl p-1";
 }
 
 
 
   return (
-    <div className={`items-center md:flex top-0  z-50 bg-sky-900 ${isMenuOpen ? 'bg-sky-900' : ''}`}>
+    <div className={`items-center md:flex top-0  z-50 bg-slate-800 ${isMenuOpen ? 'bg-sky-900' : ''}`}>
       <div className="flex justify-between p-3 md:flex-row">
       <NavLink to="" className="text-white font-serif font-bold lg:text-3xl lg:ml-32 md:mt-3 mt-1">DiAL</NavLink>
 
