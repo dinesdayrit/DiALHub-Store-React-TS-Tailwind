@@ -1,42 +1,65 @@
+import { useState } from 'react';
+import { NavLink } from "react-router-dom";
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
-import { Avatar, Dropdown, Navbar } from "flowbite-react";
+export default function MainNavigation() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-export function Component() {
+  const handleNav = () => {
+    setMenuOpen(!menuOpen);
+  }
+
+  function isActiveChecker(isActive:boolean) {
+    return isActive 
+      ? "mr-8 text-white hover:text-orange-300 text-xl lg:border-b lg:border-yellow-300 p-1" 
+      : "mr-8 text-white hover:text-orange-300 text-xl p-1";
+  }
+
   return (
-    <Navbar fluid rounded>
-      <Navbar.Brand href="https://flowbite-react.com">
-        <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
-      </Navbar.Brand>
-      <div className="flex md:order-2">
-        <Dropdown
-          arrowIcon={false}
-          inline
-          label={
-            <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
-          }
-        >
-          <Dropdown.Header>
-            <span className="block text-sm">Bonnie Green</span>
-            <span className="block truncate text-sm font-medium">name@flowbite.com</span>
-          </Dropdown.Header>
-          <Dropdown.Item>Dashboard</Dropdown.Item>
-          <Dropdown.Item>Settings</Dropdown.Item>
-          <Dropdown.Item>Earnings</Dropdown.Item>
-          <Dropdown.Divider />
-          <Dropdown.Item>Sign out</Dropdown.Item>
-        </Dropdown>
-        <Navbar.Toggle />
+    <div className="flex items-center justify-between px-4 py-4 md:px-16  bg-slate-800">
+      <div className="">
+        <NavLink to="/" className="text-white font-serif md:text-2xl font-bold">
+          DiAL Hub
+        </NavLink>
       </div>
-      <Navbar.Collapse>
-        <Navbar.Link href="#" active>
-          Home
-        </Navbar.Link>
-        <Navbar.Link href="#">About</Navbar.Link>
-        <Navbar.Link href="#">Services</Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
-      </Navbar.Collapse>
-    </Navbar>
+
+      {/* Navigation links */}
+      <div className="hidden md:block">
+        <NavLink to="/" className={({ isActive }) => isActiveChecker(isActive)}>Home</NavLink>
+        <NavLink to="/about" className={({ isActive }) => isActiveChecker(isActive)}>About</NavLink>
+        <NavLink to="/products" className={({ isActive }) => isActiveChecker(isActive)}>Products</NavLink>
+        <NavLink to="/login" className={({ isActive }) => isActiveChecker(isActive)}>Login</NavLink>
+      </div>
+
+      <div onClick={handleNav} className="md:hidden cursor-pointer pl-25">
+        <AiOutlineMenu size={35} color="orange" />
+      </div>
+
+      <div className={
+        menuOpen
+          ? "fixed left-0 top-0 w-[90%] sm:hidden h-screen bg-stone-100 p-10 ease-in duration-500 z-10"
+          : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+      }>
+        <div className="flex w-full items-center justify-end">
+          <div onClick={handleNav} className="md:hidden cursor-pointer pl-25">
+            <AiOutlineClose size={35} color="orange" />
+          </div>
+        </div>
+        <ul className="flex flex-col">
+          <li className="py-4 cursor-pointer">
+            <NavLink to="/" onClick={handleNav}>Home</NavLink>
+          </li>
+          <li className="py-4 cursor-pointer">
+            <NavLink to="/about" onClick={handleNav}>About</NavLink>
+          </li>
+          <li className="py-4 cursor-pointer">
+            <NavLink to="/products" onClick={handleNav}>Products</NavLink>
+          </li>
+          <li className="py-4 cursor-pointer">
+            <NavLink to="/login" onClick={handleNav}>Login</NavLink>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }
