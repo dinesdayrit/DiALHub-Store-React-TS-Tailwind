@@ -1,37 +1,42 @@
-import { useState } from 'react';
-import { NavLink,  } from "react-router-dom";
-import { RxHamburgerMenu } from 'react-icons/rx';
 
-export default function MainNavigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+import { Avatar, Dropdown, Navbar } from "flowbite-react";
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  function isActiveChecker(isActive:boolean) {
-    return isActive ? "mr-8 text-white hover:text-orange-300 text-xl lg:border-b lg:border-yellow-300 p-1" : "mr-8 text-white hover:text-orange-300  text-xl p-1";
-}
-
-
-
+export function Component() {
   return (
-    <div className={`items-center md:flex top-0  z-50 bg-slate-800 ${isMenuOpen ? 'bg-sky-900' : ''}`}>
-      <div className="flex justify-between p-3 md:flex-row">
-      <NavLink to="" className="text-white font-serif font-bold lg:text-3xl lg:ml-32 md:mt-3 mt-1">DiAL</NavLink>
-
-        {/* Hamburger menu icon */}
-       <RxHamburgerMenu onClick={toggleMenu} className='md:hidden lg:hidden mr-0 text-white' />
-       </div>
-
-
-        {/* Navigation links */}
-        <div className={`md:p-8 flex flex-col md:block md:w-auto md:ml-auto mr-16 ${isMenuOpen ? '' : 'hidden'}`}>
-          <NavLink to="" className={({isActive}) => isActiveChecker(isActive)} onClick={toggleMenu}>Home</NavLink>
-          <NavLink to="about" className={({isActive}) => isActiveChecker(isActive)} onClick={toggleMenu}>About</NavLink>
-          <NavLink to="products" className={({isActive}) => isActiveChecker(isActive)} onClick={toggleMenu}>Products</NavLink>
-          <NavLink to="login" className={({isActive}) => isActiveChecker(isActive)} onClick={toggleMenu}>Login</NavLink>
-        </div>
-    </div>
+    <Navbar fluid rounded>
+      <Navbar.Brand href="https://flowbite-react.com">
+        <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
+      </Navbar.Brand>
+      <div className="flex md:order-2">
+        <Dropdown
+          arrowIcon={false}
+          inline
+          label={
+            <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+          }
+        >
+          <Dropdown.Header>
+            <span className="block text-sm">Bonnie Green</span>
+            <span className="block truncate text-sm font-medium">name@flowbite.com</span>
+          </Dropdown.Header>
+          <Dropdown.Item>Dashboard</Dropdown.Item>
+          <Dropdown.Item>Settings</Dropdown.Item>
+          <Dropdown.Item>Earnings</Dropdown.Item>
+          <Dropdown.Divider />
+          <Dropdown.Item>Sign out</Dropdown.Item>
+        </Dropdown>
+        <Navbar.Toggle />
+      </div>
+      <Navbar.Collapse>
+        <Navbar.Link href="#" active>
+          Home
+        </Navbar.Link>
+        <Navbar.Link href="#">About</Navbar.Link>
+        <Navbar.Link href="#">Services</Navbar.Link>
+        <Navbar.Link href="#">Pricing</Navbar.Link>
+        <Navbar.Link href="#">Contact</Navbar.Link>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
