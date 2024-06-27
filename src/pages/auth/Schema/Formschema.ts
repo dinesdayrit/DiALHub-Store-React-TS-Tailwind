@@ -59,3 +59,4 @@ export const formAttributes: formTypes[] = [
     isPassword: true,
   },
 ];
+
