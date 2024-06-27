@@ -37,7 +37,7 @@ export default function Login() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-screen">
-      <div className="flex flex-col lg:justify-center p-12 h-full items-center">
+      <div className="flex flex-col p-12 h-full items-center">
         <div className="flex flex-col items-center">
           <img src="/dial-logo.png" width={100} alt="Dial Logo" />
           <h1 className="font-bold text-3xl text-green-500">Login</h1>

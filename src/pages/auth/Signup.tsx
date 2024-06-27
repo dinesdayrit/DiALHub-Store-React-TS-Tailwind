@@ -24,7 +24,7 @@ const Signup = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-screen">
 
-        <div className="flex flex-col lg:justify-center p-12 h-full items-center">
+        <div className="flex flex-col p-12 h-full items-center">
         <div className="flex flex-col items-center">
         <h1 className="font-bold text-3xl text-green-500">Register</h1>
         </div>
@@ -41,7 +41,7 @@ const Signup = () => {
             {errors[attribute.name]?.message && <p className="text-red-500 mt-1">{errors[attribute.name]?.message}</p>}
           </div>
         ))}
-        <p className="text-end mt-4">Already have an account? <Link to="/login" className="text-green-500 underline">login here </Link> </p>
+        <p className="text-end mt-4">Already have an account? <Link to="/login" className="text-green-500 underline">Login</Link> </p>
         <button type="submit" className="bg-green-400 mt-4 rounded-lg text-white py-2">Sign Up</button>
         <div>
           <label className="flex gap-1">
