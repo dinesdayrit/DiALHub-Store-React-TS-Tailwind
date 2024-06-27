@@ -31,7 +31,8 @@ export default function Login() {
           {formAttributes.slice(0, 2).map((attribute) => (
             <div key={attribute.name} className="mt-4">
               <label>{attribute.label}</label>
-              <input
+              <input 
+                type={attribute.type}
                 {...register(attribute.name)}
                 className="bg-white rounded-lg shadow-md p-4 w-full h-10"
                 placeholder={attribute.placeholder}
