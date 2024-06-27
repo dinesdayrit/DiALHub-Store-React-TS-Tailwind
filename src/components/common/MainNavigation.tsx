@@ -11,7 +11,7 @@ export default function MainNavigation() {
 
   function isActiveChecker(isActive:boolean) {
     return isActive 
-      ? "mr-8 text-white hover:text-orange-300 text-xl lg:border-b lg:border-yellow-300 p-1" 
+      ? "mr-8 text-white hover:text-orange-300 text-xl lg:border-b lg:border-yellow-300 p-1 text-orange-300" 
       : "mr-8 text-white hover:text-orange-300 text-xl p-1";
   }
 
@@ -37,7 +37,7 @@ export default function MainNavigation() {
 
       <div className={
         menuOpen
-          ? "fixed left-0 top-0 w-[90%] sm:hidden h-screen bg-stone-100 p-10 ease-in duration-500 z-10"
+          ? "fixed left-0 top-0 w-[90%] sm:hidden h-screen bg-slate-800 p-10 ease-in duration-500 z-10"
           : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
       }>
         <div className="flex w-full items-center justify-end">
@@ -47,16 +47,16 @@ export default function MainNavigation() {
         </div>
         <ul className="flex flex-col">
           <li className="py-4 cursor-pointer">
-            <NavLink to="/" onClick={handleNav}>Home</NavLink>
+            <NavLink to="/" className={({ isActive }) => isActiveChecker(isActive)} onClick={handleNav}>Home</NavLink>
           </li>
           <li className="py-4 cursor-pointer">
-            <NavLink to="/about" onClick={handleNav}>About</NavLink>
+            <NavLink to="/about" className={({ isActive }) => isActiveChecker(isActive)} onClick={handleNav}>About</NavLink>
           </li>
           <li className="py-4 cursor-pointer">
-            <NavLink to="/products" onClick={handleNav}>Products</NavLink>
+            <NavLink to="/products" className={({ isActive }) => isActiveChecker(isActive)} onClick={handleNav}>Products</NavLink>
           </li>
           <li className="py-4 cursor-pointer">
-            <NavLink to="/login" onClick={handleNav}>Login</NavLink>
+            <NavLink to="/login" className={({ isActive }) => isActiveChecker(isActive)} onClick={handleNav}>Login</NavLink>
           </li>
         </ul>
       </div>
