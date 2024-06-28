@@ -16,7 +16,7 @@ export default function MainNavigation() {
   }
 
   return (
-    <div className="flex items-center justify-between px-4 py-4 md:px-20  bg-slate-800">
+    <div className="flex items-center justify-between px-4 py-8 md:px-20  bg-slate-800">
       <div className="">
         <NavLink to="/" className="text-white font-serif md:text-2xl font-bold">
           DiAL Hub
