@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import SearchBar from './SearchBar';
 
+
 export default function MainNavigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -18,19 +19,26 @@ export default function MainNavigation() {
 
   return (
     <div className="flex items-center justify-between px-4 py-8 md:px-20  bg-slate-800">
-      <div className="">
+      <div>
         <NavLink to="/" className="text-white font-serif md:text-2xl font-bold">
           DiAL Hub
         </NavLink>
       </div>
 
+
+
       {/* Navigation links */}  
-      <div className="hidden md:block">
-      
+      <div className="hidden md:grid md:grid-cols-2 items-end">
+      <div className="mr-8">
+        <SearchBar />
+      </div>
+        <div className="flex flex-shrink">
         <NavLink to="/" className={({ isActive }) => isActiveChecker(isActive)}>Home</NavLink>
         <NavLink to="/about" className={({ isActive }) => isActiveChecker(isActive)}>About</NavLink>
         <NavLink to="/products" className={({ isActive }) => isActiveChecker(isActive)}>Products</NavLink>
-        <NavLink to="/login" className="bg-blue-600 text-white text-lg px-4 py-2 rounded-full">Sign in</NavLink>
+        <NavLink to="/login" className="bg-blue-700 hover:bg-blue-800 text-white text-lg px-4 py-2">Sign in</NavLink>
+        </div>
+
       </div>
 
       <div onClick={handleNav} className="md:hidden cursor-pointer pl-25">
