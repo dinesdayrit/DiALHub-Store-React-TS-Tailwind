@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import SearchBar from './SearchBar';
 
 export default function MainNavigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,8 +24,9 @@ export default function MainNavigation() {
         </NavLink>
       </div>
 
-      {/* Navigation links */}
+      {/* Navigation links */}  
       <div className="hidden md:block">
+      
         <NavLink to="/" className={({ isActive }) => isActiveChecker(isActive)}>Home</NavLink>
         <NavLink to="/about" className={({ isActive }) => isActiveChecker(isActive)}>About</NavLink>
         <NavLink to="/products" className={({ isActive }) => isActiveChecker(isActive)}>Products</NavLink>
@@ -45,6 +47,7 @@ export default function MainNavigation() {
             <AiOutlineClose size={35} color="orange" />
           </div>
         </div>
+        <SearchBar />
         <ul className="flex flex-col">
           <li className="py-4 cursor-pointer">
             <NavLink to="/" className={({ isActive }) => isActiveChecker(isActive)} onClick={handleNav}>Home</NavLink>
@@ -56,7 +59,7 @@ export default function MainNavigation() {
             <NavLink to="/products" className={({ isActive }) => isActiveChecker(isActive)} onClick={handleNav}>Products</NavLink>
           </li>
           <li className="py-4 cursor-pointer">
-            <NavLink to="/login" className={({ isActive }) => isActiveChecker(isActive)} onClick={handleNav}>Login</NavLink>
+          <NavLink to="/login" className="bg-blue-600 text-white text-lg px-6 py-3 rounded-full" onClick={handleNav}>Sign in</NavLink>
           </li>
         </ul>
       </div>
