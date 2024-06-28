@@ -28,7 +28,7 @@ export default function MainNavigation() {
 
 
       {/* Navigation links */}  
-      <div className="hidden md:grid md:grid-cols-2 items-end">
+      <div className="hidden lg:grid lg:grid-cols-2 items-end">
       <div className="mr-8">
         <SearchBar />
       </div>
@@ -36,22 +36,22 @@ export default function MainNavigation() {
         <NavLink to="/" className={({ isActive }) => isActiveChecker(isActive)}>Home</NavLink>
         <NavLink to="/about" className={({ isActive }) => isActiveChecker(isActive)}>About</NavLink>
         <NavLink to="/products" className={({ isActive }) => isActiveChecker(isActive)}>Products</NavLink>
-        <NavLink to="/login" className="bg-blue-700 hover:bg-blue-800 text-white text-lg px-4 py-2">Sign in</NavLink>
+        <NavLink to="/login" className="bg-blue-700 hover:bg-blue-800 text-white lg:text-lg px-4 py-2">Sign in</NavLink>
         </div>
 
       </div>
 
-      <div onClick={handleNav} className="md:hidden cursor-pointer pl-25">
+      <div onClick={handleNav} className="lg:hidden cursor-pointer pl-25">
         <AiOutlineMenu size={35} color="orange" />
       </div>
 
       <div className={
         menuOpen
-          ? "fixed left-0 top-0 w-[90%] sm:hidden h-screen bg-slate-800 p-10 ease-in duration-500 z-10"
+          ? "fixed left-0 top-0 w-[90%] lg:hidden h-screen bg-slate-800 p-10 ease-in duration-500 z-10"
           : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
       }>
         <div className="flex w-full items-center justify-end">
-          <div onClick={handleNav} className="md:hidden cursor-pointer pl-25">
+          <div onClick={handleNav} className="lg:hidden cursor-pointer pl-25">
             <AiOutlineClose size={35} color="orange" />
           </div>
         </div>
