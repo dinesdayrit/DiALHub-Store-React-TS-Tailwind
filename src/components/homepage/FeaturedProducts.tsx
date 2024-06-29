@@ -10,7 +10,7 @@ const FeaturedProducts: FC = () => {
 
     return (
         <div className="flex flex-col items-center mt-16 mb-16 justify-center">
-            <h1 className="mb-4 text-5xl">Featured Products...</h1>
+            <h1 className="mb-4 text-3xl md:text-5xl">Featured Products...</h1>
 
             <div className="flex flex-col justify-center items-center mt-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6">

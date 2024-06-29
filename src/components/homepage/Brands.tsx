@@ -1,44 +1,39 @@
 const brandsData = [
+
   {
     imageSrc:
-      "https://cdn.tailgrids.com/2.2/assets/images/brands/graygrids.svg",
-    lightImageSrc:
-      "https://cdn.tailgrids.com/2.2/assets/images/brands/graygrids-white.svg",
-    altText: "graygrids",
+      "adidas.svg",
+    altText: "adidas",
     link: "#",
   },
   {
-    imageSrc:
-      "https://cdn.tailgrids.com/2.2/assets/images/brands/lineicons.svg",
-    lightImageSrc:
-      "https://cdn.tailgrids.com/2.2/assets/images/brands/lineIcons-white.svg",
-    altText: "lineicons",
+    imageSrc: "vans-3.svg",
+    altText: "vans",
     link: "#",
   },
   {
-    imageSrc: "https://cdn.tailgrids.com/2.2/assets/images/brands/uideck.svg",
-    lightImageSrc:
-      "https://cdn.tailgrids.com/2.2/assets/images/brands/uideck-white.svg",
+    imageSrc: "quiksilver.svg",
     altText: "uideck",
     link: "#",
   },
   {
-    imageSrc: "https://cdn.tailgrids.com/2.2/assets/images/brands/ayroui.svg",
-    lightImageSrc:
-      "https://cdn.tailgrids.com/2.2/assets/images/brands/ayroui-white.svg",
-    altText: "ayroui",
+    imageSrc:
+      "nike.svg",
+    altText: "Nike",
     link: "#",
   },
+
+
 ];
 
 export default function Brands() {
   return (
-    <section className="bg-sky-900 py-10 lg:py-[60px] dark:bg-dark">
-        <h1 className="text-center pb-6 text-white">Trusted By</h1>
+    <section className="bg-sky-900 py-8 lg:py-[60px] dark:bg-dark">
+        <h1 className="text-center text-slate-400 text-xl font-semibold">Our brands</h1>
       <div className="container mx-auto">
         <div className="flex flex-wrap">
           <div className="w-full px-4">
-            <div className="flex flex-wrap items-center justify-center">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16">
               {brandsData.map((brand, i) => (
                 <SingleImage key={i} brand={brand} />
               ))}
@@ -52,24 +47,18 @@ export default function Brands() {
 
 type Brand = {
   imageSrc: string;
-  lightImageSrc: string;
   altText: string;
   link: string;
 };
 
 const SingleImage = ({ brand }: { brand: Brand }) => {
-  const { link, imageSrc, lightImageSrc, altText } = brand;
+  const { link, imageSrc, altText } = brand;
   return (
     <a
       href={link}
-      className="mx-4 flex w-[150px] items-center justify-center py-5 2xl:w-[180px]"
+      className="flex w-[150px] items-center justify-center md:py-5 2xl:w-[180px]"
     >
-      <img src={imageSrc} alt={altText} className="h-10 w-full dark:hidden" />
-      <img
-        src={lightImageSrc}
-        alt={altText}
-        className="hidden h-10 w-full dark:block"
-      />
+      <img src={imageSrc} alt={altText} className="h-24 md:h-full" />
     </a>
   );
 };
