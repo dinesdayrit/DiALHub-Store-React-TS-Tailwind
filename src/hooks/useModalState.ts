@@ -9,7 +9,7 @@ type ModalState = {
 };
 
 export const useModalState = create<ModalState>((set) => ({
-    isCartModalOpen: true,
+    isCartModalOpen: false,
     openCartModal: () => set({ isCartModalOpen: true }),
     closeCartModal: () => set({ isCartModalOpen: false }),
 }));

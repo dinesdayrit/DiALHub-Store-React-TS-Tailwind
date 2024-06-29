@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import SearchBar from './SearchBar';
 import { ShoppingBag } from 'lucide-react';
+import { useModalState } from '@/hooks/useModalState';
 
 
 export default function MainNavigation() {
+  const { openCartModal} = useModalState()
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNav = () => {
@@ -38,13 +40,16 @@ export default function MainNavigation() {
         <NavLink to="/about" className={({ isActive }) => isActiveChecker(isActive)}>About</NavLink>
         <NavLink to="/products" className={({ isActive }) => isActiveChecker(isActive)}>Products</NavLink>
         <NavLink to="/login" className="bg-blue-700 hover:bg-blue-800 text-white lg:text-lg px-4 py-2 mr-4">Sign in</NavLink>
-        <button> <ShoppingBag size={40} color="white" strokeWidth={1.75} /> </button>
+        <button onClick={openCartModal}> <ShoppingBag size={40} color="white" strokeWidth={1.75} /> </button>
         </div>
       </div>
 
-      <div onClick={handleNav} className="lg:hidden cursor-pointer pl-24 flex items-center gap-2">
-      <button> <ShoppingBag size={40} color="white" strokeWidth={1.75} /> </button>
+      <div className="lg:hidden cursor-pointer pl-24 flex items-center gap-2">
+        <button onClick={openCartModal}> <ShoppingBag size={40} color="white" strokeWidth={1.75} /> </button>
+        <div onClick={handleNav}>
         <AiOutlineMenu size={35} color="orange" />
+        </div>
+        
       </div>
 
       <div className={
