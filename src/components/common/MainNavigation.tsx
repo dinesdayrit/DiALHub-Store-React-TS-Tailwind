@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import SearchBar from './SearchBar';
+import { ShoppingBag } from 'lucide-react';
 
 
 export default function MainNavigation() {
@@ -18,7 +19,7 @@ export default function MainNavigation() {
   }
 
   return (
-    <div className="flex items-center justify-between px-4 py-8 md:px-20  bg-slate-800">
+    <div className="flex items-center justify-between px-4 py-8 lg:px-20  bg-slate-800">
       <div>
         <NavLink to="/" className="text-white font-serif md:text-2xl font-bold">
           DiAL Hub
@@ -36,12 +37,13 @@ export default function MainNavigation() {
         <NavLink to="/" className={({ isActive }) => isActiveChecker(isActive)}>Home</NavLink>
         <NavLink to="/about" className={({ isActive }) => isActiveChecker(isActive)}>About</NavLink>
         <NavLink to="/products" className={({ isActive }) => isActiveChecker(isActive)}>Products</NavLink>
-        <NavLink to="/login" className="bg-blue-700 hover:bg-blue-800 text-white lg:text-lg px-4 py-2">Sign in</NavLink>
+        <NavLink to="/login" className="bg-blue-700 hover:bg-blue-800 text-white lg:text-lg px-4 py-2 mr-4">Sign in</NavLink>
+        <NavLink to="/my-cart" > <ShoppingBag size={40} color="white" strokeWidth={1.75} /> </NavLink>
         </div>
-
       </div>
 
-      <div onClick={handleNav} className="lg:hidden cursor-pointer pl-25">
+      <div onClick={handleNav} className="lg:hidden cursor-pointer pl-24 flex items-center gap-2">
+      <NavLink to="/my-cart" > <ShoppingBag size={40} color="white" strokeWidth={1.75} /> </NavLink>
         <AiOutlineMenu size={35} color="orange" />
       </div>
 
@@ -51,7 +53,7 @@ export default function MainNavigation() {
           : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
       }>
         <div className="flex w-full items-center justify-end">
-          <div onClick={handleNav} className="lg:hidden cursor-pointer pl-25">
+          <div onClick={handleNav} className="lg:hidden cursor-pointer">
             <AiOutlineClose size={35} color="orange" />
           </div>
         </div>
