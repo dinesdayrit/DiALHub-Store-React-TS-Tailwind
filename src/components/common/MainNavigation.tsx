@@ -38,12 +38,12 @@ export default function MainNavigation() {
         <NavLink to="/about" className={({ isActive }) => isActiveChecker(isActive)}>About</NavLink>
         <NavLink to="/products" className={({ isActive }) => isActiveChecker(isActive)}>Products</NavLink>
         <NavLink to="/login" className="bg-blue-700 hover:bg-blue-800 text-white lg:text-lg px-4 py-2 mr-4">Sign in</NavLink>
-        <NavLink to="/my-cart" > <ShoppingBag size={40} color="white" strokeWidth={1.75} /> </NavLink>
+        <button> <ShoppingBag size={40} color="white" strokeWidth={1.75} /> </button>
         </div>
       </div>
 
       <div onClick={handleNav} className="lg:hidden cursor-pointer pl-24 flex items-center gap-2">
-      <NavLink to="/my-cart" > <ShoppingBag size={40} color="white" strokeWidth={1.75} /> </NavLink>
+      <button> <ShoppingBag size={40} color="white" strokeWidth={1.75} /> </button>
         <AiOutlineMenu size={35} color="orange" />
       </div>
 
