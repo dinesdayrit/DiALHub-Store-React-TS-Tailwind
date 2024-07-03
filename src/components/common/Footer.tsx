@@ -68,16 +68,16 @@ export default function Footer() {
                 <div className="md:flex justify-between">
                     <ul className="space-y-6 mt-10 hidden md:block">
                         <li>
-                            <span className="block text-white">Home</span>
+                        <a href="/"><span className="block text-white hover:text-orange-500 hover:underline">Home</span></a> 
                         </li>
                         <li>
-                            <span className="block text-white">About</span>
+                        <a href="/about"><span className="block text-white hover:text-orange-500 hover:underline">About</span></a> 
                         </li>
                         <li>
-                            <span className="block text-white">Products</span>
+                        <a href="/products"><span className="block text-white hover:text-orange-500 hover:underline">Products</span></a> 
                         </li>
                         <li>
-                            <span className="block text-white">Sign-in</span>
+                        <a href="/login"><span className="block text-white hover:text-orange-500 hover:underline">Sign-in</span></a> 
                         </li>
                     </ul>
 
