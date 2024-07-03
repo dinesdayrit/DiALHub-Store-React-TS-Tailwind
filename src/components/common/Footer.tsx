@@ -1,4 +1,4 @@
-import { Instagram, InstagramIcon, Facebook, LucideYoutube, Twitter, Youtube, YoutubeIcon } from "lucide-react"
+import {  InstagramIcon, Facebook, Twitter, Youtube } from "lucide-react"
 
 export default function Footer() {
 
