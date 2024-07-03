@@ -17,7 +17,9 @@ export default function Root () {
                     isCartModalOpen && <MyCart />
                 }
             </main>
+            <footer className="bg-slate-800">
             <Footer />
+            </footer>
         </div>
     )
 }
