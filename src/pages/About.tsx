@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="flex flex-col items-center just h-[32rem] ">
+    <div className="flex flex-col items-center h-[40rem] ">
       <h1 className="mt-16 font-bold text-3xl">About us.</h1>
 
       <div className="flex flex-col lg:flex-row items-center  md:w-1/3 max-w-6xl">
