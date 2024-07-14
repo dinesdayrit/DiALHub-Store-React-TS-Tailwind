@@ -1,9 +1,9 @@
 export default function About() {
   return (
-    <div className="flex flex-col items-center h-[40rem] ">
+    <div className="flex flex-col items-center just h-[32rem] ">
       <h1 className="mt-16 font-bold text-3xl">About us.</h1>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center md:w-1/3 max-w-6xl">
+      <div className="flex flex-col lg:flex-row items-center  md:w-1/3 max-w-6xl">
         <img src="/fam-pic.svg" width={200} />
         <p className="text-mono">
           <span className="text-2xl text-amber-700">DiAL </span>
