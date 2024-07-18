@@ -72,10 +72,10 @@ export default function MainNavigation() {
       <div className="lg:hidden cursor-pointer pl-24 flex items-center gap-2">
         <button onClick={openCartModal}>
           {" "}
-          <ShoppingBag size={40} color="white" strokeWidth={1.75} />{" "}
+          <ShoppingBag size={40} color="orange" strokeWidth={1.75} />{" "}
         </button>
         <div onClick={handleNav}>
-          <AiOutlineMenu size={35} color="orange" />
+          <AiOutlineMenu size={35} color="white" />
         </div>
       </div>
 
@@ -88,7 +88,7 @@ export default function MainNavigation() {
       >
         <div className="flex w-full items-center justify-end">
           <div onClick={handleNav} className="lg:hidden cursor-pointer">
-            <AiOutlineClose size={35} color="orange" />
+            <AiOutlineClose size={35} color="white" />
           </div>
         </div>
         <SearchBar />
