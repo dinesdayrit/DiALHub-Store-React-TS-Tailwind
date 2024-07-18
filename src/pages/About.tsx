@@ -3,7 +3,7 @@ export default function About() {
     <div className="flex flex-col items-center h-[40rem] ">
       <h1 className="mt-16 font-bold text-3xl">About us.</h1>
 
-      <div className="flex flex-col lg:flex-row items-center  md:w-1/3 max-w-6xl">
+      <div className="flex flex-col lg:flex-row items-center  md:w-1/3 max-w-6xl animate-slide-up-fade-in">
         <img src="/fam-pic.svg" width={200} />
         <p className="text-mono">
           <span className="text-2xl text-amber-700">DiAL </span>
