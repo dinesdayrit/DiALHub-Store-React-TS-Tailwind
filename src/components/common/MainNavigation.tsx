@@ -59,7 +59,7 @@ export default function MainNavigation() {
             Sign in
           </NavLink>
           <motion.button
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.3 }}
             transition={{ type: "spring", stiffness: 500 }}
             onClick={openCartModal}
           >
