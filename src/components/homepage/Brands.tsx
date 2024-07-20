@@ -34,7 +34,7 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
 export default function Brands() {
@@ -49,7 +49,7 @@ export default function Brands() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }} // Adjusted threshold
+              viewport={{ once: true, amount: 0.3 }}
               variants={containerVariants}
               className="flex flex-wrap items-center justify-center gap-4 md:gap-16"
             >
