@@ -49,7 +49,7 @@ export default function Brands() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.5 }}
               variants={containerVariants}
               className="flex flex-wrap items-center justify-center gap-4 md:gap-16"
             >
