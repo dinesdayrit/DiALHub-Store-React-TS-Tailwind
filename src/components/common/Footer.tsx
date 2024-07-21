@@ -132,7 +132,7 @@ export default function Footer() {
           <motion.ul
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.1 }}
             variants={containerVariants}
             className="flex items-center space-x-4"
           >
@@ -142,6 +142,8 @@ export default function Footer() {
                 <motion.li
                   key={i}
                   variants={itemVariants}
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 500 }}
                   className="w-10 h-10 border rounded-full flex items-center justify-center"
                 >
                   <a href={item.href} target="_blank" rel="noopener noreferrer">
