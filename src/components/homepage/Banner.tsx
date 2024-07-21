@@ -1,6 +1,6 @@
 export default function Banner() {
   return (
-    <div className="max-h-[43rem] outline">
+    <div>
       <img src="/banner-bg.png" className="max-h-[43rem]  w-full" />
       {/* <img
           src="/dial-logo.png"
