@@ -6,9 +6,7 @@ export default function HomePage() {
   return (
     <div>
       <div>
-        <div className="max-h-[43rem] outline">
-          <Banner />
-        </div>
+        <Banner />
         <Brands />
         <FeaturedProducts />
       </div>
