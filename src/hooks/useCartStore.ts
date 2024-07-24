@@ -1,3 +1,4 @@
+// hooks/useCartStore.ts
 import create from "zustand";
 
 interface CartItem {
@@ -5,9 +6,9 @@ interface CartItem {
   name: string;
   price: number;
   image: string;
-  color: string;
-  status: string;
-  quantity?: number;
+  color?: string;
+  status?: string;
+  quantity: number;
 }
 
 interface CartState {
