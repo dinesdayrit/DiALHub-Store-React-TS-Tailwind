@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { useCartStore } from "@/hooks/useCartStore";
+import { Button } from "../ui/button";
 
 interface AddToCartButtonProps {
   product: {
@@ -19,14 +20,7 @@ const AddToCartButton: FC<AddToCartButtonProps> = ({ product }) => {
     addToCart({ ...product, quantity: 1 });
   };
 
-  return (
-    <button
-      onClick={handleAddToCart}
-      className="bg-green-500 hover:bg-green-500/90 p-3 rounded-lg text-white hover:font-medium"
-    >
-      Add to cart
-    </button>
-  );
+  return <Button onClick={handleAddToCart}>Add to cart</Button>;
 };
 
 export default AddToCartButton;
