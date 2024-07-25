@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import DUMMY_PRODUCTS from "@/DummyProducts";
-import AddToCartButton from "../products/AddtoCartButton";
+import AddToCartButton from "../shared/AddtoCartButton";
 
 const FeaturedProducts: FC = () => {
   // Get the first three products

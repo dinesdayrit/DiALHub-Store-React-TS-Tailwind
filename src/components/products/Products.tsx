@@ -1,5 +1,5 @@
 import DUMMY_PRODUCTS from "@/DummyProducts";
-import AddToCartButton from "./AddtoCartButton";
+import AddToCartButton from "../shared/AddtoCartButton";
 
 const Products = () => {
   return (
