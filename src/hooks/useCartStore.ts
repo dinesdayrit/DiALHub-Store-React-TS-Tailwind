@@ -1,5 +1,5 @@
 // hooks/useCartStore.ts
-import create from "zustand";
+import { create } from "zustand";
 
 interface CartItem {
   id: number;
