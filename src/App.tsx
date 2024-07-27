@@ -4,12 +4,13 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Root from "@/pages/Root";
-import HomePage from "@/pages/HomePage";
-import Login from "@/pages/auth/Login";
-import About from "@/pages/About";
-import Signup from "@/pages/auth/Signup";
-import ProductsPage from "./pages/ProductsPage";
+import { lazy } from "react";
+const Root = lazy(() => import("@/pages/Root"));
+const HomePage = lazy(() => import("@/pages/HomePage"));
+const Login = lazy(() => import("@/pages/auth/Login"));
+const About = lazy(() => import("@/pages/About"));
+const Signup = lazy(() => import("@/pages/auth/Signup"));
+const ProductsPage = lazy(() => import("@/pages/ProductsPage"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
