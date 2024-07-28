@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import { useCartStore } from "@/hooks/useCartStore";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
+import { useToast } from "@/components/ui/use-toast";
 
 interface AddToCartButtonProps {
   product: {
@@ -17,11 +18,26 @@ interface AddToCartButtonProps {
 const AddToCartButton: FC<AddToCartButtonProps> = ({ product }) => {
   const addToCart = useCartStore((state) => state.addToCart);
   const [isClicked, setIsClicked] = useState(false);
+  const { toast } = useToast();
 
   const handleAddToCart = () => {
     setIsClicked(true);
     addToCart({ ...product, quantity: 1 });
     setTimeout(() => setIsClicked(false), 300);
+
+    toast({
+      title: "Item Added to Cart",
+      description: `${product.name} has been added to your cart.`,
+      action: (
+        <Button
+          onClick={() => {
+            /* Navigate to cart */
+          }}
+        >
+          View Cart
+        </Button>
+      ),
+    });
   };
 
   return (

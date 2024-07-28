@@ -5,6 +5,7 @@ import MyCart from "@/components/modals/MyCart";
 import Footer from "@/components/common/Footer";
 import { Suspense } from "react";
 import Spinner from "@/components/shared/Spinner";
+import { Toaster } from "@/components/ui/toaster";
 
 export default function Root() {
   const { isCartModalOpen } = useModalState();
@@ -16,7 +17,7 @@ export default function Root() {
         <Suspense fallback={<Spinner type="lazyLoad" />}>
           <Outlet />
         </Suspense>
-
+        <Toaster />
         {isCartModalOpen && <MyCart />}
       </main>
       <footer className="bg-slate-800">
