@@ -3,6 +3,7 @@ import { useCartStore } from "@/hooks/useCartStore";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import { useToast } from "@/components/ui/use-toast";
+import { useModalState } from "@/hooks/useModalState";
 
 interface AddToCartButtonProps {
   product: {
@@ -19,6 +20,7 @@ const AddToCartButton: FC<AddToCartButtonProps> = ({ product }) => {
   const addToCart = useCartStore((state) => state.addToCart);
   const [isClicked, setIsClicked] = useState(false);
   const { toast } = useToast();
+  const { openCartModal } = useModalState();
 
   const handleAddToCart = () => {
     setIsClicked(true);
@@ -28,15 +30,7 @@ const AddToCartButton: FC<AddToCartButtonProps> = ({ product }) => {
     toast({
       title: "Item Added to Cart",
       description: `${product.name} has been added to your cart.`,
-      action: (
-        <Button
-          onClick={() => {
-            /* Navigate to cart */
-          }}
-        >
-          View Cart
-        </Button>
-      ),
+      action: <Button onClick={openCartModal}>View Cart</Button>,
     });
   };
 
