@@ -39,7 +39,7 @@ const itemVariants = {
 
 export default function Brands() {
   return (
-    <section className="bg-sky-900 py-8 lg:py-[60px] dark:bg-dark">
+    <section className="bg-sky-950 py-8 lg:py-[60px] dark:bg-dark">
       <h1 className="text-center text-slate-400 text-xl font-semibold">
         Our brands
       </h1>
