@@ -1,12 +1,12 @@
 import FeaturedProducts from "../components/homepage/FeaturedProducts";
-import Banner from "@/components/homepage/Banner";
 import Brands from "@/components/homepage/Brands";
+import Hero from "@/components/homepage/Hero";
 
 export default function HomePage() {
   return (
     <div>
       <div>
-        <Banner />
+        <Hero />
         <Brands />
         <FeaturedProducts />
       </div>
