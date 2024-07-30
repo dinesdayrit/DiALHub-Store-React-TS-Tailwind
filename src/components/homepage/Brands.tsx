@@ -40,7 +40,7 @@ const itemVariants = {
 export default function Brands() {
   return (
     <section className="bg-sky-950 py-8 lg:py-[60px] dark:bg-dark">
-      <h1 className="text-center text-slate-400 text-xl font-semibold">
+      <h1 className="text-center text-slate-400 text-md font-georgia">
         Our brands
       </h1>
       <div className="container mx-auto">
