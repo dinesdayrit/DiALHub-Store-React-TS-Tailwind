@@ -21,10 +21,15 @@ export default function MainNavigation() {
   }
 
   return (
-    <div className="flex items-center justify-between px-4 py-8 lg:px-20  bg-slate-800">
+    <div className="flex items-center justify-between px-4 py-4 lg:px-20  bg-slate-800">
       <div>
-        <NavLink to="/" className="text-white font-serif md:text-2xl font-bold">
-          DiAL Hub
+        <NavLink to="/">
+          <motion.img
+            src="/dial-logo.png"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="w-[5rem]"
+          />
         </NavLink>
       </div>
 
