@@ -74,7 +74,7 @@ export default function Hero() {
             className="mt-4"
           >
             <Button>
-              Shop now <ArrowUpRight />
+              SHOP NOW <ArrowUpRight />
             </Button>
           </motion.div>
         </div>
