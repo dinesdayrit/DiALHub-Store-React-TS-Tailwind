@@ -4,6 +4,10 @@ export default {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        georgia: ["Georgia", "serif"],
+        cursive: ["cursive"],
+      },
       keyframes: {
         "slide-up-fade-in": {
           "0%": {

@@ -27,7 +27,9 @@ const FeaturedProducts: FC = () => {
 
   return (
     <div className="flex flex-col items-center mt-16 mb-16 justify-center">
-      <h1 className="mb-4 text-3xl md:text-5xl">Featured Products...</h1>
+      <h1 className="mb-4 text-3xl md:text-5xl font-georgia">
+        Featured Products
+      </h1>
 
       <div className="flex flex-col justify-center items-center mt-16">
         <motion.div
