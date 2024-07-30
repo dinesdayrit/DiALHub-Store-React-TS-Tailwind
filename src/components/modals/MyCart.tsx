@@ -1,6 +1,7 @@
 import { useModalState } from "@/hooks/useModalState";
 import { Button } from "../ui/button";
 import { useCartStore } from "@/hooks/useCartStore";
+import { ArrowUpRight } from "lucide-react";
 
 export default function MyCart() {
   const { closeCartModal } = useModalState();
@@ -15,8 +16,8 @@ export default function MyCart() {
   const total = subtotal + shipping + vat;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 animate-slide-up-fade-in">
-      <div className="relative w-full max-w-lg rounded-lg bg-white p-8 shadow-xl">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 animate-slide-up-fade-in ">
+      <div className="relative max-h-[30rem] w-full max-w-lg rounded-lg bg-white p-8 shadow-xl overflow-auto">
         <div
           className="absolute top-3 right-3 p-2 text-gray-600 hover:text-gray-800 cursor-pointer"
           onClick={closeCartModal}
@@ -25,14 +26,17 @@ export default function MyCart() {
         </div>
         {cartItems.length === 0 ? (
           <div className="flex flex-col gap-8 justify-center items-center">
-            <h1 className="py-10">NO ITEM ON CART</h1>
-            <Button>choose from products</Button>
+            <h1 className="py-2 text-xl">NO ITEM ON CART</h1>
+            <Button>
+              SHOP NOW <ArrowUpRight />
+            </Button>
           </div>
         ) : (
           <>
-            <h1 className="mb-4 text-2xl font-semibold text-gray-800">
+            <h1 className=" text-2xl font-semibold text-gray-800">
               Shopping Cart
             </h1>
+            <p>Cart Items: {cartItems.length}</p>
             {cartItems.map((item) => (
               <div
                 key={item.id}
