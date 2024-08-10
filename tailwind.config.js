@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         georgia: ["Georgia", "serif"],
         cursive: ["cursive"],
+        moontime: ["'MoonTime'"],
       },
       keyframes: {
         "slide-up-fade-in": {

@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar";
 import { ShoppingBag } from "lucide-react";
 import { useModalState } from "@/hooks/useModalState";
 import { motion } from "framer-motion";
+import { Button } from "../ui/button";
 
 export default function MainNavigation() {
   const { openCartModal } = useModalState();
@@ -57,11 +58,8 @@ export default function MainNavigation() {
           >
             Products
           </NavLink>
-          <NavLink
-            to="/login"
-            className="bg-blue-700 hover:bg-blue-800 text-white lg:text-lg px-4 py-2 mr-4"
-          >
-            Sign in
+          <NavLink to="/login" className="mr-4">
+            <Button>Sign in</Button>
           </NavLink>
           <motion.button
             whileHover={{ scale: 1.3 }}
@@ -126,12 +124,8 @@ export default function MainNavigation() {
             </NavLink>
           </li>
           <li className="py-4 cursor-pointer">
-            <NavLink
-              to="/login"
-              className="bg-blue-600 text-white text-lg px-6 py-3 rounded-full"
-              onClick={handleNav}
-            >
-              Sign in
+            <NavLink to="/login" onClick={handleNav}>
+              <Button>Sign in</Button>
             </NavLink>
           </li>
         </ul>
