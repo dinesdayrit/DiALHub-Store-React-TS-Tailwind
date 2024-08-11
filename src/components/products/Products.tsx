@@ -1,13 +1,25 @@
+import { useState } from "react";
 import DUMMY_PRODUCTS from "@/DummyProducts";
 import AddToCartButton from "../shared/AddtoCartButton";
+import Sorting from "./Sorting";
 
 const Products = () => {
+  const [sortOrder, setSortOrder] = useState<string>("low-to-high");
+
+  const sortedProducts = [...DUMMY_PRODUCTS].sort((a, b) => {
+    return sortOrder === "low-to-high" ? a.price - b.price : b.price - a.price;
+  });
+
   return (
     <div className="flex flex-col items-center p-8 gap-4">
       <h1 className="font-bold text-4xl">PRODUCTS</h1>
 
+      <div className="w-full">
+        <Sorting sortOrder={sortOrder} setSortOrder={setSortOrder} />
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-4 border rounded-md shadow-md">
-        {DUMMY_PRODUCTS.map((product) => (
+        {sortedProducts.map((product) => (
           <div
             key={product.id}
             className="border rounded-lg flex flex-col items-center shadow-lg"
