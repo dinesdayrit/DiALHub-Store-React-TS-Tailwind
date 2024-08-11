@@ -22,113 +22,115 @@ export default function MainNavigation() {
   }
 
   return (
-    <div className="flex items-center justify-between px-4 py-4 lg:px-20  bg-slate-800">
-      <div>
-        <NavLink to="/">
-          <motion.img
-            src="/dial-logo.png"
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            className="w-[5rem]"
-          />
-        </NavLink>
-      </div>
-
-      {/* Navigation links */}
-      <div className="hidden lg:grid lg:grid-cols-2 items-end">
-        <div className="mr-8">
-          <SearchBar />
+    <div className="flex justify-center bg-slate-800">
+      <div className="flex py-4 justify-between w-[95rem] px-2 lg:px-0">
+        <div>
+          <NavLink to="/">
+            <motion.img
+              src="/dial-logo.png"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="w-[5rem]"
+            />
+          </NavLink>
         </div>
-        <div className="flex flex-shrink">
-          <NavLink
-            to="/"
-            className={({ isActive }) => isActiveChecker(isActive)}
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => isActiveChecker(isActive)}
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="/products"
-            className={({ isActive }) => isActiveChecker(isActive)}
-          >
-            Products
-          </NavLink>
-          <NavLink to="/login" className="mr-4">
-            <Button>Sign in</Button>
-          </NavLink>
-          <motion.button
-            whileHover={{ scale: 1.3 }}
-            transition={{ type: "spring", stiffness: 500 }}
-            onClick={openCartModal}
-          >
-            {" "}
-            <ShoppingBag size={40} color="orange" strokeWidth={1.75} />{" "}
-          </motion.button>
-        </div>
-      </div>
 
-      <div className="lg:hidden cursor-pointer pl-24 flex items-center gap-2">
-        <button onClick={openCartModal}>
-          {" "}
-          <ShoppingBag size={40} color="orange" strokeWidth={1.75} />{" "}
-        </button>
-        <div onClick={handleNav}>
-          <AiOutlineMenu size={35} color="white" />
-        </div>
-      </div>
-
-      <div
-        className={
-          menuOpen
-            ? "fixed left-0 top-0 w-[90%] lg:hidden h-screen bg-slate-800 p-10 ease-in duration-500 z-10"
-            : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
-        }
-      >
-        <div className="flex w-full items-center justify-end">
-          <div onClick={handleNav} className="lg:hidden cursor-pointer">
-            <AiOutlineClose size={35} color="white" />
+        {/* Navigation links */}
+        <div className="hidden lg:grid lg:grid-cols-2 items-end">
+          <div className="mr-8">
+            <SearchBar />
           </div>
-        </div>
-        <SearchBar />
-        <ul className="flex flex-col">
-          <li className="py-4 cursor-pointer">
+          <div className="flex flex-shrink">
             <NavLink
               to="/"
               className={({ isActive }) => isActiveChecker(isActive)}
-              onClick={handleNav}
             >
               Home
             </NavLink>
-          </li>
-          <li className="py-4 cursor-pointer">
             <NavLink
               to="/about"
               className={({ isActive }) => isActiveChecker(isActive)}
-              onClick={handleNav}
             >
               About
             </NavLink>
-          </li>
-          <li className="py-4 cursor-pointer">
             <NavLink
               to="/products"
               className={({ isActive }) => isActiveChecker(isActive)}
-              onClick={handleNav}
             >
               Products
             </NavLink>
-          </li>
-          <li className="py-4 cursor-pointer">
-            <NavLink to="/login" onClick={handleNav}>
+            <NavLink to="/login" className="mr-4">
               <Button>Sign in</Button>
             </NavLink>
-          </li>
-        </ul>
+            <motion.button
+              whileHover={{ scale: 1.3 }}
+              transition={{ type: "spring", stiffness: 500 }}
+              onClick={openCartModal}
+            >
+              {" "}
+              <ShoppingBag size={40} color="orange" strokeWidth={1.75} />{" "}
+            </motion.button>
+          </div>
+        </div>
+
+        <div className="lg:hidden cursor-pointer pl-24 flex items-center gap-2">
+          <button onClick={openCartModal}>
+            {" "}
+            <ShoppingBag size={40} color="orange" strokeWidth={1.75} />{" "}
+          </button>
+          <div onClick={handleNav}>
+            <AiOutlineMenu size={35} color="white" />
+          </div>
+        </div>
+
+        <div
+          className={
+            menuOpen
+              ? "fixed left-0 top-0 w-[90%] lg:hidden h-screen bg-slate-800 p-10 ease-in duration-500 z-10"
+              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+          }
+        >
+          <div className="flex w-full items-center justify-end">
+            <div onClick={handleNav} className="lg:hidden cursor-pointer">
+              <AiOutlineClose size={35} color="white" />
+            </div>
+          </div>
+          <SearchBar />
+          <ul className="flex flex-col">
+            <li className="py-4 cursor-pointer">
+              <NavLink
+                to="/"
+                className={({ isActive }) => isActiveChecker(isActive)}
+                onClick={handleNav}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="py-4 cursor-pointer">
+              <NavLink
+                to="/about"
+                className={({ isActive }) => isActiveChecker(isActive)}
+                onClick={handleNav}
+              >
+                About
+              </NavLink>
+            </li>
+            <li className="py-4 cursor-pointer">
+              <NavLink
+                to="/products"
+                className={({ isActive }) => isActiveChecker(isActive)}
+                onClick={handleNav}
+              >
+                Products
+              </NavLink>
+            </li>
+            <li className="py-4 cursor-pointer">
+              <NavLink to="/login" onClick={handleNav}>
+                <Button>Sign in</Button>
+              </NavLink>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
