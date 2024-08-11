@@ -50,7 +50,7 @@ export default function Hero() {
             whileInView="onscreen"
             viewport={{ once: false, amount: 0.1 }}
             variants={h1textVariants}
-            className="font-semibold font-serif text-[#F4E7FB] text-3xl md:text-7xl"
+            className="font-semibold font-serif text-[#F4E7FB] text-4xl md:text-7xl"
           >
             The DiAL Hub
           </motion.h1>
@@ -59,7 +59,7 @@ export default function Hero() {
             whileInView="onscreen"
             viewport={{ once: false, amount: 0.1 }}
             variants={pVariants}
-            className="text-[#06D6A0] text-5xl font-bold font-moontime"
+            className="text-[#06D6A0] text-3xl md:text-5xl font-bold font-moontime"
           >
             Smart Shop
           </motion.p>
