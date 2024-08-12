@@ -71,7 +71,7 @@ export default function MainNavigation() {
             >
               <div className="relative">
                 <ShoppingBag size={40} color="orange" strokeWidth={1.75} />
-                <p className="absolute bottom-0 right-0 text-slate-200 text-lg font-bold">
+                <p className="absolute top-5 right-0 text-slate-200 text-lg font-bold">
                   {cartItems.length}
                 </p>
               </div>
@@ -83,7 +83,7 @@ export default function MainNavigation() {
           <button onClick={openCartModal}>
             <div className="relative">
               <ShoppingBag size={40} color="orange" strokeWidth={1.75} />
-              <p className="absolute bottom-0 right-0 text-slate-200 text-lg font-bold">
+              <p className="absolute top-5 right-0 text-slate-200 text-lg font-bold">
                 {cartItems.length}
               </p>
             </div>
