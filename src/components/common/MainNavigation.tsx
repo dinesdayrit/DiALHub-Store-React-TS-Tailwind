@@ -23,7 +23,7 @@ export default function MainNavigation() {
 
   return (
     <div className="flex justify-center bg-slate-800">
-      <div className="flex py-4 justify-between w-[95rem] px-2 lg:px-0">
+      <div className="flex py-4 justify-between w-[80rem] px-2 lg:px-0">
         <div>
           <NavLink to="/">
             <motion.img
