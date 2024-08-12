@@ -5,10 +5,12 @@ import SearchBar from "./SearchBar";
 import { ShoppingBag } from "lucide-react";
 import { useModalState } from "@/hooks/useModalState";
 import { motion } from "framer-motion";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
+import { useCartStore } from "@/hooks/useCartStore";
 
 export default function MainNavigation() {
   const { openCartModal } = useModalState();
+  const { cartItems } = useCartStore();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNav = () => {
@@ -67,16 +69,24 @@ export default function MainNavigation() {
               transition={{ type: "spring", stiffness: 500 }}
               onClick={openCartModal}
             >
-              {" "}
-              <ShoppingBag size={40} color="orange" strokeWidth={1.75} />{" "}
+              <div className="relative">
+                <ShoppingBag size={40} color="orange" strokeWidth={1.75} />
+                <p className="absolute bottom-0 right-0 text-slate-200 text-lg font-bold">
+                  {cartItems.length}
+                </p>
+              </div>
             </motion.button>
           </div>
         </div>
 
         <div className="lg:hidden cursor-pointer pl-24 flex items-center gap-2">
           <button onClick={openCartModal}>
-            {" "}
-            <ShoppingBag size={40} color="orange" strokeWidth={1.75} />{" "}
+            <div className="relative">
+              <ShoppingBag size={40} color="orange" strokeWidth={1.75} />
+              <p className="absolute bottom-0 right-0 text-slate-200 text-lg font-bold">
+                {cartItems.length}
+              </p>
+            </div>
           </button>
           <div onClick={handleNav}>
             <AiOutlineMenu size={35} color="white" />
