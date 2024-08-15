@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import DUMMY_PRODUCTS from "@/DummyProducts";
 import AddToCartButton from "../shared/AddtoCartButton";
 import Sorting from "./Sorting";
+import { useState } from "react";
 
-const Products = () => {
+const ProductsPage = () => {
   const [sortOrder, setSortOrder] = useState<string>("low-to-high");
 
   const sortedProducts = [...DUMMY_PRODUCTS].sort((a, b) => {
@@ -21,26 +22,25 @@ const Products = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-4 border rounded-md shadow-md">
           {sortedProducts.map((product) => (
-            <div
-              key={product.id}
-              className="border rounded-lg flex flex-col items-center shadow-lg"
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-[25rem] object-cover rounded-t-lg flex-shrink-0"
-              />
-              <div className="flex flex-col items-center justify-center w-10/12 h-40">
-                <h2 className="text-xl font-semibold">{product.name}</h2>
-                <p className="text-gray-600">{product.description}</p>
-                <p className="text-lg font-bold mt-2">
-                  ${product.price.toFixed(2)}
-                </p>
-                <AddToCartButton
-                  product={{ ...product, id: Number(product.id) }}
+            <Link to={`/products/${product.id}`} key={product.id}>
+              <div className="border rounded-lg flex flex-col items-center shadow-lg">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-[25rem] object-cover rounded-t-lg flex-shrink-0"
                 />
+                <div className="flex flex-col items-center justify-center w-10/12 h-40">
+                  <h2 className="text-xl font-semibold">{product.name}</h2>
+                  <p className="text-gray-600">{product.description}</p>
+                  <p className="text-lg font-bold mt-2">
+                    ${product.price.toFixed(2)}
+                  </p>
+                  <AddToCartButton
+                    product={{ ...product, id: Number(product.id) }}
+                  />
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -48,4 +48,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default ProductsPage;
