@@ -40,7 +40,9 @@ const AddToCartButton: FC<AddToCartButtonProps> = ({ product }) => {
       animate={{ scale: isClicked ? 1.1 : 1 }}
       transition={{ duration: 0.2 }}
     >
-      <Button onClick={handleAddToCart}>Add to cart</Button>
+      <Button variant="addtoCart" onClick={handleAddToCart}>
+        Add to cart
+      </Button>
     </motion.div>
   );
 };
