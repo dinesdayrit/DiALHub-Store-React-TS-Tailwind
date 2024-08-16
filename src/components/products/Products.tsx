@@ -27,19 +27,20 @@ export default function Products() {
               key={product.id}
               className="max-w-sm flex flex-col justify-between h-full"
             >
-              <div className="h-full flex items-center justify-center">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="object-contain"
-                />
-              </div>
+              <Link to={`/products/${product.id}`}>
+                <div className="h-full flex items-center justify-center">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="object-contain hover:opacity-30"
+                  />
+                </div>
+              </Link>
               <div className="flex flex-col flex-grow justify-between p-4">
-                <Link to={`/products/${product.id}`}>
-                  <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                    {product.name}
-                  </h5>
-                </Link>
+                <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                  {product.name}
+                </h5>
+
                 <div className="mb-5 mt-2.5 flex items-center">
                   {Array(5)
                     .fill(0)
