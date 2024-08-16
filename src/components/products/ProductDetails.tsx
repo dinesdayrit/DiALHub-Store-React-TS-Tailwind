@@ -17,7 +17,7 @@ const ProductDetails = () => {
       <img
         src={product.image}
         alt={product.name}
-        className="h-[30rem] flex-shrink-0 rounded-lg"
+        className="flex-shrink-0 rounded-lg"
       />
       <p className="text-lg text-gray-600 mt-4">{product.description}</p>
       <p className="text-2xl font-bold mt-4">${product.price.toFixed(2)}</p>
