@@ -21,7 +21,7 @@ export default function Products() {
           <Sorting sortOrder={sortOrder} setSortOrder={setSortOrder} />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-6 px-4 border rounded-md shadow-md">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:py-6 md:px-4 md:border md:rounded-md md:shadow-md">
           {sortedProducts.map((product) => (
             <Card
               key={product.id}
