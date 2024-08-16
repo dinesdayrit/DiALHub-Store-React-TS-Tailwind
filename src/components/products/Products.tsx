@@ -28,7 +28,8 @@ export default function Products() {
               className="max-w-sm flex flex-col justify-between h-full"
             >
               <Link to={`/products/${product.id}`}>
-                <div className="h-full flex items-center justify-center">
+                <div className="relative h-full flex items-center justify-center text-transparent hover:text-cyan-800 font-bold">
+                  <p className="absolute">View Product</p>
                   <img
                     src={product.image}
                     alt={product.name}
