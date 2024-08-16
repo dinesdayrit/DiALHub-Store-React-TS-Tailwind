@@ -5,13 +5,15 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { lazy } from "react";
-import ProductDetails from "./components/products/ProductDetails";
 const Root = lazy(() => import("@/pages/Root"));
 const HomePage = lazy(() => import("@/pages/HomePage"));
 const Login = lazy(() => import("@/pages/auth/Login"));
 const About = lazy(() => import("@/pages/About"));
 const Signup = lazy(() => import("@/pages/auth/Signup"));
 const ProductsPage = lazy(() => import("@/pages/ProductsPage"));
+const ProductDetails = lazy(
+  () => import("@/components/products/ProductDetails")
+);
 
 const router = createBrowserRouter(
   createRoutesFromElements(

@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import DUMMY_PRODUCTS from "@/DummyProducts";
+import AddToCartButton from "../shared/AddtoCartButton";
 
 const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
-  console.log("okay pero dili");
   // Find product by ID
   const product = DUMMY_PRODUCTS.find((product) => product.id === id);
 
@@ -17,10 +17,11 @@ const ProductDetails = () => {
       <img
         src={product.image}
         alt={product.name}
-        className="w-full h-[30rem] object-cover rounded-lg"
+        className="w-full rounded-lg"
       />
       <p className="text-lg text-gray-600 mt-4">{product.description}</p>
       <p className="text-2xl font-bold mt-4">${product.price.toFixed(2)}</p>
+      <AddToCartButton product={{ ...product, id: Number(product.id) }} />
     </div>
   );
 };
