@@ -54,7 +54,7 @@ export default function Footer() {
       <div className="gap-6 justify-between md:flex">
         <div className="flex-1">
           <div className="max-w-xs">
-            <img src="dial-logo.png" className="w-36" />
+            <img src="/dial-logo.png" className="w-36" />
             <p className="leading-relaxed mt-2 text-[15px]">
               Lorem Ipsum has been the industry's standard dummy text ever since
               the 1500s.
