@@ -12,15 +12,16 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="p-8 max-w-4xl mx-auto">
+    <div className="flex flex-col items-center justify-center p-8 max-w-4xl mx-auto">
       <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
       <img
         src={product.image}
         alt={product.name}
-        className="w-full rounded-lg"
+        className="h-[30rem] flex-shrink-0 rounded-lg"
       />
       <p className="text-lg text-gray-600 mt-4">{product.description}</p>
       <p className="text-2xl font-bold mt-4">${product.price.toFixed(2)}</p>
+
       <AddToCartButton product={{ ...product, id: Number(product.id) }} />
     </div>
   );
